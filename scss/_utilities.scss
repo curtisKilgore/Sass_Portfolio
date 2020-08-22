@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.bottom-line {
+  display: block; /* This will put the pseudo element on its own line. */
+  height: 2px;
+  width: 3rem;
+  background-color: $main-color;
+  margin: 0 auto 1rem auto; /* This will center the border. */
+}
 // Buttons
 %btn-shared {
   display: inline-block;
@@ -76,5 +83,23 @@ a[class^="btn-"]:hover {
   }
   &-4 {
     margin: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2em;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
