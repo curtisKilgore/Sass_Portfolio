@@ -114,12 +114,3 @@ a[class^="btn-"]:hover {
   font-weight: 100;
   text-transform: uppercase;
 }
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
